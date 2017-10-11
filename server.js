@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   var log = `Visitted: ${moment().format(
     'LLLL'
   )} Medtod: ${req.method} Path: ${req.path}`;
-  fs.appendFileSync('log.txt', log + '\n', (err, data) => {
+  fs.appendFile('log.txt', log + '\n', (err, data) => {
     if (err) {
       console.log('Unable to log to log file.');
     }
