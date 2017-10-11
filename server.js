@@ -44,6 +44,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('projects', (req, res) => {
+  res.render('projects');
+});
+
 app.get('/about', (req, res) => {
   res.render('about', {
     pageTitle: 'About Page',
@@ -54,7 +58,7 @@ app.get('/about', (req, res) => {
 app.get('/json', (req, res) => {
   res.send({
     name: 'Natwipool',
-    likes: ['bikes', 'fishing']
+    likes: ['biking', 'fishing']
   });
 });
 
